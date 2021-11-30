@@ -43,6 +43,11 @@ namespace ShopManagment.Application
             return opreationResult.Success();
         }
 
+        public List<ProductCategoryDTO> GetAllCategory()
+        {
+            return _repository.GetAllProductCategoryForProduct();
+        }
+
         public EditDto GetDetails(long id)
         {
             return _repository.GetDetail(id);

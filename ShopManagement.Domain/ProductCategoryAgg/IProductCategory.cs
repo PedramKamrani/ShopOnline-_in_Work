@@ -8,5 +8,6 @@ namespace ShopManagement.Domain.ProductCategoryAgg
     {
         EditDto GetDetail(long id);
         List<ProductCategoryDTO> Search(SearchModel serchModel);
+        List<ProductCategoryDTO> GetAllProductCategoryForProduct();
     }
 }

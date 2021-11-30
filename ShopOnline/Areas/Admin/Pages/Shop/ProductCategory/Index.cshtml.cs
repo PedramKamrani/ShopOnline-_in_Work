@@ -8,6 +8,7 @@ namespace ServiceHost.Areas.Admin.Pages.Shop.ProductCategory
     public class IndexModel : PageModel
     {
         private readonly IProductCategoryApplication _productCategory;
+        public List<ProductCategoryDTO> Categores;
         public List<ProductCategoryDTO> ProductCategoryDTO;
         public SearchModel SearchModel;
         public IndexModel(IProductCategoryApplication productCategory)
@@ -20,6 +21,7 @@ namespace ServiceHost.Areas.Admin.Pages.Shop.ProductCategory
         }
         public IActionResult OnGetCreate()
         {
+            Categores = _productCategory.GetAllCategory();
             return Partial("./Create", new CreateDto());
         }
         public JsonResult OnPostCreate( CreateDto dto)

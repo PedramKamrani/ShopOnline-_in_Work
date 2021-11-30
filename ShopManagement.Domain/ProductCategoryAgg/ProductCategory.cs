@@ -1,4 +1,6 @@
 ﻿using _0_FramWork.BaseClass;
+using ShopManagement.Domain.ProductAgg;
+using System.Collections.Generic;
 
 namespace ShopManagement.Domain.ProductCategoryAgg
 {
@@ -12,6 +14,7 @@ namespace ShopManagement.Domain.ProductCategoryAgg
         public string Keywords { get; private set; }
         public string MetaDescription { get; private set; }
         public string Slug { get; private set; }
+        public List<Product> Products { get; private set; }
 
         public ProductCategory(string name, string description, string picture,
             string pictureAlt, string pictureTitle, string keywords,
@@ -19,6 +22,7 @@ namespace ShopManagement.Domain.ProductCategoryAgg
         {
             Name = name;
             Description = description;
+            if(!string.IsNullOrWhiteSpace(Picture))
             Picture = picture;
             PictureAlt = pictureAlt;
             PictureTitle = pictureTitle;

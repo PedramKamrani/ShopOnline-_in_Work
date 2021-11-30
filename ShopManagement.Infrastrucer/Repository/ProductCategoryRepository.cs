@@ -17,6 +17,21 @@ namespace ShopManagement.Infrastrucer.Repository
         {
             _context = context;
         }
+
+        public List<ProductCategoryDTO> GetAllProductCategoryForProduct()
+        {
+            return _context.ProductCategories.Select(x=>new ProductCategoryDTO
+            { 
+                Id=x.Id,
+                CreationDate=x.CreationDate.ToString(),
+                Name=x.Name,
+                Description=x.Description,
+                Picture=x.Picture,
+                PictureAlt=x.PictureAlt,
+                PictureTitle=x.PictureTitle
+            }).ToList();
+        }
+
         public EditDto GetDetail(long id)
         {
             return _context.ProductCategories.Where(x => x.Id == id)
@@ -42,7 +57,7 @@ namespace ShopManagement.Infrastrucer.Repository
             {
                 Id=x.Id,
                Name=x.Name,
-               CreationDate=x.CreationDate,
+               CreationDate=x.CreationDate.ToString(),
                Picture=x.Picture,
                PictureAlt=x.PictureAlt,
                PictureTitle=x.PictureTitle

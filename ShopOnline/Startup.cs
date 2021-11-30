@@ -1,14 +1,9 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using ShopManagement.Configure;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace ShopOnline
 {
@@ -24,7 +19,7 @@ namespace ShopOnline
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            string connectionstring= Configuration.GetConnectionString("ShopOnlin");
+            string connectionstring = Configuration.GetConnectionString("ShopOnlin");
             ShopManagementBootstraper.Configure(services, connectionstring);
             services.AddRazorPages();
         }
