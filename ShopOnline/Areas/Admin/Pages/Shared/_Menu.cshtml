@@ -1,0 +1,40 @@
+﻿
+<div class="left side-menu">
+    <div class="sidebar-inner slimscrollleft">
+        <div class="user-details">
+            <div class="pull-right">
+                <img src="~/Theme/assets/img/usericon.png" alt="" class="thumb-md img-circle">
+            </div>
+            <div class="user-info">
+                <div class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"> <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="javascript:void(0)"><i class="md md-face-unlock"></i> پروفایل<div class="ripple-wrapper"></div></a></li>
+                        
+                        <li><a asp-page="/Account" asp-page-handler="Logout"><i class="md md-settings-power"></i> خروج</a></li>
+                    </ul>
+                </div>
+
+                <p class="text-muted m-0"></p>
+            </div>
+        </div>
+        <!--- Divider -->
+        <div id="sidebar-menu">
+            <ul>
+                    <li class="has_sub">
+                        <a class="waves-effect"><i class="md md-mail"></i><span> فروشگاه </span><span class="pull-right"><i class="md md-add"></i></span></a>
+                        <ul class="list-unstyled">
+                            <li><a asp-page="/Shop/Slide/Index">اسلایدر</a></li>
+                            <li><a asp-page="/Shop/Banner/Index">بنر</a></li>
+                            <li><a asp-page="/Shop/ProductCategory/Index">گروه محصولات</a></li>
+                            <li><a asp-page="/Shop/Product/Index">محصولات</a></li>
+                            <li><a asp-page="/Shop/ProductPictures/Index">عکس محصولات</a></li>
+                        </ul>
+                    </li>
+                
+            </ul>
+            <div class="clearfix"></div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
