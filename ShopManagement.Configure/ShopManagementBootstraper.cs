@@ -29,7 +29,7 @@ namespace ShopManagement.Configure
 
             //Slider
             service.AddScoped<ISlider,SliderRepository>();
-            service.AddTransient<ISliderApplication,SliderApplication>();
+            service.AddScoped<ISliderApplication,SliderApplication>();
             //Context
             service.AddDbContext<ShopContext>(Option =>
             {

@@ -8,15 +8,19 @@ namespace ShopManagment.Application
 {
     public class SliderApplication : ISliderApplication
     {
-        private readonly SliderRepository _repository;
-        public SliderApplication(SliderRepository repository)
+        private readonly ISlider _repository;
+        private readonly IFileUploader _uploader;
+        public SliderApplication(ISlider repository, IFileUploader uploader)
         {
             _repository = repository;
+            _uploader = uploader;
         }
         public OpreationResult Create(CreateSlider command)
         {
             OpreationResult opreationResult = new OpreationResult();
-            var entity = new Slider(command.Picture, command.PictureAlt, command.PictureTitle, command.Heading, command.Title, command.Text, command.BtnText, command.Link);
+            string path = $"slider";
+           var picproduct= _uploader.Upload(command.Picture, path);
+            var entity = new Slider(picproduct, command.PictureAlt, command.PictureTitle, command.Heading, command.Title, command.Text, command.BtnText, command.Link);
             _repository.Create(entity);
             _repository.SaveChanges();
             return opreationResult.Success();
@@ -28,7 +32,9 @@ namespace ShopManagment.Application
             var entity = _repository.Get(command.Id);
             if (entity == null)
                 return opreationResult.Faild(ApplicationMessage.RecordNotFound);
-            entity.Edit(command.Picture, command.PictureAlt, command.PictureTitle, command.Heading, command.Title, command.Text, command.BtnText, command.Link);
+            string path = $"slider";
+            var picproduct = _uploader.Upload(command.Picture, path);
+            entity.Edit(picproduct, command.PictureAlt, command.PictureTitle, command.Heading, command.Title, command.Text, command.BtnText, command.Link);
             _repository.SaveChanges();
             return opreationResult.Success();
         }
