@@ -2,6 +2,7 @@
 using ShopManagement.Domain.ProductAgg;
 using ShopManagement.Domain.ProductCategoryAgg;
 using ShopManagement.Domain.ProductPictureAgg;
+using ShopManagement.Domain.SliderAgg;
 using ShopManagement.Infrastrucer.Mapping;
 using System;
 
@@ -13,6 +14,7 @@ namespace ShopManagement.Infrastrucer
         {
                 
         }
+        public DbSet<Slider> Sliders { get; set; }
         public DbSet<ProductCategory> ProductCategories { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<ProductPicture> ProductPictures  { get; set; }

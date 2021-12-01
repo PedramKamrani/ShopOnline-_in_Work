@@ -3,9 +3,11 @@ using Microsoft.Extensions.DependencyInjection;
 using ShopManagement.Application.Contract.ProductCategoryDTO;
 using ShopManagement.Application.Contract.ProductDTO;
 using ShopManagement.Application.Contract.ProductPictureDTO;
+using ShopManagement.Application.Contract.SliderDTO;
 using ShopManagement.Domain.ProductAgg;
 using ShopManagement.Domain.ProductCategoryAgg;
 using ShopManagement.Domain.ProductPictureAgg;
+using ShopManagement.Domain.SliderAgg;
 using ShopManagement.Infrastrucer;
 using ShopManagement.Infrastrucer.Repository;
 using ShopManagment.Application;
@@ -24,6 +26,10 @@ namespace ShopManagement.Configure
             //Product Picture
             service.AddScoped<IProductPicture, ProductPictureRepository>();
             service.AddScoped<IProductPictureApplication, ProductPictureApplication>();
+
+            //Slider
+            service.AddScoped<ISlider,SliderRepository>();
+            service.AddTransient<ISliderApplication,SliderApplication>();
             //Context
             service.AddDbContext<ShopContext>(Option =>
             {
