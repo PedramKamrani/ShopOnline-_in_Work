@@ -28,7 +28,6 @@ namespace ServiceHost.Areas.Admin.Pages.Shop.Product
             ProductCategory = new SelectList(_productCategores.GetAllList(), "Id", "Name");
             Products = _productApplication.Search(serachModel);
         }
-
         public IActionResult OnGetCreate()
         {
             var command = new CreateProductDTO
@@ -55,8 +54,5 @@ namespace ServiceHost.Areas.Admin.Pages.Shop.Product
             var res = _productApplication.Edit(dto);
             return new JsonResult(res);
         }
-
-
-
     }
 }

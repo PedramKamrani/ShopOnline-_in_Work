@@ -1,8 +1,10 @@
+using _0_FramWork.Application;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using ServiceHost;
 using ShopManagement.Configure;
 
 namespace ShopOnline
@@ -19,6 +21,9 @@ namespace ShopOnline
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            #region IOC
+            services.AddScoped<IFileUploader,FileUploader>();
+            #endregion
             string connectionstring = Configuration.GetConnectionString("ShopOnlin");
             ShopManagementBootstraper.Configure(services, connectionstring);
             services.AddRazorPages();

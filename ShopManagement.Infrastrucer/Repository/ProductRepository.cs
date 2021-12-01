@@ -18,6 +18,15 @@ namespace ShopManagement.Infrastrucer.Repository
             _context = context;
         }
 
+        public List<ProductDTO> GetAllProduct()
+        {
+            return _context.Products.Select(x => new ProductDTO
+            {
+                Id = x.Id,
+                Name = x.Name
+            }).ToList();
+        }
+
         public EditProductDTO GetDetail(long id)
         {
            return _context.Products.Select(x => new EditProductDTO
@@ -37,6 +46,8 @@ namespace ShopManagement.Infrastrucer.Repository
                Slug=x.Slug
             }).FirstOrDefault(x=>x.Id==id);
         }
+
+        
 
         public List<ProductDTO> Search(SearchModel serachModel)
         {

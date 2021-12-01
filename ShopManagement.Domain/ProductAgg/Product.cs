@@ -1,5 +1,7 @@
 ﻿using _0_FramWork.BaseClass;
 using ShopManagement.Domain.ProductCategoryAgg;
+using ShopManagement.Domain.ProductPictureAgg;
+using System.Collections.Generic;
 
 namespace ShopManagement.Domain.ProductAgg
 {
@@ -35,6 +37,7 @@ namespace ShopManagement.Domain.ProductAgg
         public string Keywords { get; private set; }
         public string MetaDescription { get; private set; }
         public ProductCategory ProductCategory { get; private set; }
+        public List<ProductPicture> ProductPictures { get; set; }
 
         public void Edit(string name, string code, string shortDescription, string description, string picture, string pictureAlt, string pictureTitle,
             long categoryId, string slug, string keywords, string metaDescription)

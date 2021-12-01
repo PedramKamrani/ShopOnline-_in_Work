@@ -48,6 +48,11 @@ namespace ShopManagment.Application
 
         }
 
+        public List<ProductDTO> GetAllProduct()
+        {
+            return _repository.GetAllProduct();
+        }
+
         public EditProductDTO GetDetails(long id)
         {
             return _repository.GetDetail(id);

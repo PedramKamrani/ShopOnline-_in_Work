@@ -3,21 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31829.152
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceHost", "ShopOnline\ServiceHost.csproj", "{9C801712-7CC4-4106-AC14-E4BC8588754C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceHost", "ShopOnline\ServiceHost.csproj", "{9C801712-7CC4-4106-AC14-E4BC8588754C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shop", "Shop", "{3625B7B4-CE1B-4A40-A4B7-0EDDFBCD7E3D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "0-FramWork", "0-FramWork\0-FramWork.csproj", "{07273C77-A408-4722-8E12-A53E55F7C016}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "0-FramWork", "0-FramWork\0-FramWork.csproj", "{07273C77-A408-4722-8E12-A53E55F7C016}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopManagement.Domain", "ShopManagement.Domain\ShopManagement.Domain.csproj", "{94B7F142-A992-4029-A9C4-5D50903234AE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShopManagement.Domain", "ShopManagement.Domain\ShopManagement.Domain.csproj", "{94B7F142-A992-4029-A9C4-5D50903234AE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopManagement.Application.Contract", "ShopManagement.Application.Contract\ShopManagement.Application.Contract.csproj", "{B9B1AFF5-14DC-47B5-A29F-5544FB0E4143}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShopManagement.Application.Contract", "ShopManagement.Application.Contract\ShopManagement.Application.Contract.csproj", "{B9B1AFF5-14DC-47B5-A29F-5544FB0E4143}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopManagment.Application", "ShopManagment.Application\ShopManagment.Application.csproj", "{4891EAC2-D531-4865-9DA7-B2D816522CF5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShopManagment.Application", "ShopManagment.Application\ShopManagment.Application.csproj", "{4891EAC2-D531-4865-9DA7-B2D816522CF5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopManagement.Infrastrucer", "ShopManagement.Infrastrucer\ShopManagement.Infrastrucer.csproj", "{EBA2F001-6788-4EE6-8C85-8431524863A1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShopManagement.Infrastrucer", "ShopManagement.Infrastrucer\ShopManagement.Infrastrucer.csproj", "{EBA2F001-6788-4EE6-8C85-8431524863A1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopManagement.Configure", "ShopManagement.Configure\ShopManagement.Configure.csproj", "{02D95D1E-6BB2-47E6-9283-838AD9E53328}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShopManagement.Configure", "ShopManagement.Configure\ShopManagement.Configure.csproj", "{02D95D1E-6BB2-47E6-9283-838AD9E53328}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

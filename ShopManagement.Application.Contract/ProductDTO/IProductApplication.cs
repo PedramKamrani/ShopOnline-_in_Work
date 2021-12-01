@@ -9,5 +9,8 @@ namespace ShopManagement.Application.Contract.ProductDTO
         OpreationResult Edit(EditProductDTO dto);
         EditProductDTO GetDetails(long id);
         List<ProductDTO> Search(SearchModel serachModel);
+        List<ProductDTO> GetAllProduct();
+
+
     }
 }
