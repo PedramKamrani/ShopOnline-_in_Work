@@ -42,7 +42,7 @@ namespace ShopManagement.Infrastrucer.Repository
                 Heading=c.Heading,
                 IsRemoved=c.IsRemoved,
                 Link=c.Link,
-                Picture=c.Picture,
+                
                 PictureAlt=c.PictureAlt,
                 PictureTitle=c.PictureTitle,
                 Text=c.Text,

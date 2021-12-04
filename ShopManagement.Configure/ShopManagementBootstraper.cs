@@ -1,4 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using _1_QueryLayer.Query;
+using _1_QueryLayer.Query.Contract.Slider;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using ShopManagement.Application.Contract.ProductCategoryDTO;
 using ShopManagement.Application.Contract.ProductDTO;
@@ -30,6 +32,9 @@ namespace ShopManagement.Configure
             //Slider
             service.AddScoped<ISlider,SliderRepository>();
             service.AddScoped<ISliderApplication,SliderApplication>();
+
+            ///Query
+            service.AddScoped<ISliderQuery, SliderQuery>();
             //Context
             service.AddDbContext<ShopContext>(Option =>
             {

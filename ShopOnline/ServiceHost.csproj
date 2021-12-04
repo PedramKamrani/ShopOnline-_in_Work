@@ -13,6 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\1_QueryLayer\1_QueryLayer.csproj" />
     <ProjectReference Include="..\ShopManagement.Configure\ShopManagement.Configure.csproj" />
   </ItemGroup>
 

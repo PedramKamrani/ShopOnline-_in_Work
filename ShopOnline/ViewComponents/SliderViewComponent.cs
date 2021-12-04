@@ -1,20 +1,24 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using _1_QueryLayer.Query.Contract.Slider;
+using Microsoft.AspNetCore.Mvc;
 using ShopManagement.Application.Contract.SliderDTO;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace ServiceHost.ViewComponents
 {
     public class SliderViewComponent : ViewComponent
     {
-        public readonly ISliderApplication _slider;
-        public SliderViewComponent(ISliderApplication slider)
+        private readonly ISliderQuery _slider;
+      
+
+        public SliderViewComponent(ISliderQuery slider)
         {
             _slider = slider;
         }
 
         public IViewComponentResult Invoke()
         {
-            var slider = _slider.GetListSlider();
+            var slider = _slider.GetSliderQueries();
             return View(slider);
         }
     }

@@ -19,6 +19,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShopManagement.Infrastrucer
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShopManagement.Configure", "ShopManagement.Configure\ShopManagement.Configure.csproj", "{02D95D1E-6BB2-47E6-9283-838AD9E53328}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1_QueryLayer", "1_QueryLayer\1_QueryLayer.csproj", "{14059F32-1044-4A10-92ED-8B5267E321DE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +55,10 @@ Global
 		{02D95D1E-6BB2-47E6-9283-838AD9E53328}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{02D95D1E-6BB2-47E6-9283-838AD9E53328}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{02D95D1E-6BB2-47E6-9283-838AD9E53328}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14059F32-1044-4A10-92ED-8B5267E321DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14059F32-1044-4A10-92ED-8B5267E321DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14059F32-1044-4A10-92ED-8B5267E321DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14059F32-1044-4A10-92ED-8B5267E321DE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
