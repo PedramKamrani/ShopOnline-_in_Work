@@ -11,7 +11,6 @@
   <ItemGroup>
     <ProjectReference Include="..\DisCount.Managment.Application\DisCount.Managment.Application.csproj" />
     <ProjectReference Include="..\Discount.Managment.Infrastrucer.EFCore\Discount.Managment.Infrastrucer.EFCore.csproj" />
-    <ProjectReference Include="..\DisCount.Manangment.Domain\DisCount.Manangment.Domain.csproj" />
   </ItemGroup>
 
 </Project>

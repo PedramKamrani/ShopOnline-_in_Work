@@ -4,9 +4,9 @@ using DisCount.Manangment.Domain.CustomerDiscounts;
 using System;
 using System.Collections.Generic;
 
-namespace Discount.Managment.Application
+namespace DisCount.Managment.Application
 {
-    class CustomerDiscountApplication : ICustomerDiscountApplication
+   public class CustomerDiscountApplication : ICustomerDiscountApplication
     {
         private readonly ICustomerDiscount _repository;
         public CustomerDiscountApplication(ICustomerDiscount repository)
