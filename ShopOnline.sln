@@ -25,21 +25,25 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DisCountManagment", "DisCou
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DM.Managment.Domain", "DM.Managment.Domain", "{14EE4E65-FDA9-4ABF-B1CB-480B82747427}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DisCount.Manangment.Domain", "DisCount.Manangment.Domain\DisCount.Manangment.Domain.csproj", "{2EA90630-AD2C-4EA4-84D1-2BB346E4DF3D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DisCount.Manangment.Domain", "DisCount.Manangment.Domain\DisCount.Manangment.Domain.csproj", "{2EA90630-AD2C-4EA4-84D1-2BB346E4DF3D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DM.Managment.Application.Contract", "DM.Managment.Application.Contract", "{A67E7B3A-2053-45E0-9689-E33FBE3C0DF8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Discount.Managment.Application.Contract", "Discount.Managment.Application.Contract\Discount.Managment.Application.Contract.csproj", "{A45A9BC1-0E5B-4F53-AA1F-D7DD633615B9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Discount.Managment.Application.Contract", "Discount.Managment.Application.Contract\Discount.Managment.Application.Contract.csproj", "{A45A9BC1-0E5B-4F53-AA1F-D7DD633615B9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DM.Managment.Application", "DM.Managment.Application", "{70CB9D18-942C-41BB-8E86-C91D4B4BD63B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DisCount.Managment.Application", "DisCount.Managment.Application\DisCount.Managment.Application.csproj", "{AC4292EF-F729-42B3-9F74-296E99B24320}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DisCount.Managment.Application", "DisCount.Managment.Application\DisCount.Managment.Application.csproj", "{AC4292EF-F729-42B3-9F74-296E99B24320}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DM.Managment.EFCore", "DM.Managment.EFCore", "{C342102D-FB4E-41C5-A22E-7ADEFB8E606C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Discount.Managment.Infrastrucer.EFCore", "Discount.Managment.Infrastrucer.EFCore\Discount.Managment.Infrastrucer.EFCore.csproj", "{4F84E350-6952-4B49-9438-D3F7BE19E1FC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Discount.Managment.Infrastrucer.EFCore", "Discount.Managment.Infrastrucer.EFCore\Discount.Managment.Infrastrucer.EFCore.csproj", "{4F84E350-6952-4B49-9438-D3F7BE19E1FC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Discount.Managment.Configure", "Discount.Managment.Configure\Discount.Managment.Configure.csproj", "{759014B0-E6D3-44EC-9284-D4B6BE8245BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Discount.Managment.Configure", "Discount.Managment.Configure\Discount.Managment.Configure.csproj", "{759014B0-E6D3-44EC-9284-D4B6BE8245BE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Discount", "Discount", "{BC5A23A9-E6B0-4F4C-A7D4-DFDC39D66A37}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ColleagueDiscount", "ColleagueDiscount", "{CEE54BBD-9E62-43BF-B46F-3EEDB42DB723}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -109,6 +113,7 @@ Global
 		{4891EAC2-D531-4865-9DA7-B2D816522CF5} = {3625B7B4-CE1B-4A40-A4B7-0EDDFBCD7E3D}
 		{EBA2F001-6788-4EE6-8C85-8431524863A1} = {3625B7B4-CE1B-4A40-A4B7-0EDDFBCD7E3D}
 		{02D95D1E-6BB2-47E6-9283-838AD9E53328} = {3625B7B4-CE1B-4A40-A4B7-0EDDFBCD7E3D}
+		{BC2DDA9B-4BD2-4469-BDD3-390C33CAC9F2} = {BC5A23A9-E6B0-4F4C-A7D4-DFDC39D66A37}
 		{14EE4E65-FDA9-4ABF-B1CB-480B82747427} = {BC2DDA9B-4BD2-4469-BDD3-390C33CAC9F2}
 		{2EA90630-AD2C-4EA4-84D1-2BB346E4DF3D} = {14EE4E65-FDA9-4ABF-B1CB-480B82747427}
 		{A67E7B3A-2053-45E0-9689-E33FBE3C0DF8} = {BC2DDA9B-4BD2-4469-BDD3-390C33CAC9F2}
@@ -118,6 +123,7 @@ Global
 		{C342102D-FB4E-41C5-A22E-7ADEFB8E606C} = {BC2DDA9B-4BD2-4469-BDD3-390C33CAC9F2}
 		{4F84E350-6952-4B49-9438-D3F7BE19E1FC} = {C342102D-FB4E-41C5-A22E-7ADEFB8E606C}
 		{759014B0-E6D3-44EC-9284-D4B6BE8245BE} = {C342102D-FB4E-41C5-A22E-7ADEFB8E606C}
+		{CEE54BBD-9E62-43BF-B46F-3EEDB42DB723} = {BC5A23A9-E6B0-4F4C-A7D4-DFDC39D66A37}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D8D106E0-7C7D-4744-9EBE-CA1743A601B7}
