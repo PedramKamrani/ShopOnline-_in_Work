@@ -15,9 +15,9 @@ namespace ShopManagment.Application
             _repository = repository;
             _uploader = uploader;
         }
-        public OpreationResult Create(CreateSlider command)
+        public OperationResult Create(CreateSlider command)
         {
-            OpreationResult opreationResult = new OpreationResult();
+            OperationResult opreationResult = new OperationResult();
             string path = $"slider";
            var picproduct= _uploader.Upload(command.Picture, path);
             var entity = new Slider(picproduct, command.PictureAlt, command.PictureTitle, command.Heading, command.Title, command.Text, command.BtnText, command.Link);
@@ -26,9 +26,9 @@ namespace ShopManagment.Application
             return opreationResult.Success();
         }
 
-        public OpreationResult Edit(EditSlider command)
+        public OperationResult Edit(EditSlider command)
         {
-            OpreationResult opreationResult = new OpreationResult();
+            OperationResult opreationResult = new OperationResult();
             var entity = _repository.Get(command.Id);
             if (entity == null)
                 return opreationResult.Faild(ApplicationMessage.RecordNotFound);
@@ -49,9 +49,9 @@ namespace ShopManagment.Application
             return _repository.GetAllSliderList();
         }
 
-        public OpreationResult Remove(long id)
+        public OperationResult Remove(long id)
         {
-            OpreationResult opreationResult = new OpreationResult();
+            OperationResult opreationResult = new OperationResult();
             var res = _repository.Get(id);
             res.IsRemove();
             _repository.SaveChanges();
@@ -59,9 +59,9 @@ namespace ShopManagment.Application
             return opreationResult.Success();
         }
 
-        public OpreationResult Restore(long id)
+        public OperationResult Restore(long id)
         {
-            OpreationResult opreationResult = new OpreationResult();
+            OperationResult opreationResult = new OperationResult();
             var res = _repository.Get(id);
             res.IsRestore();
             _repository.SaveChanges();

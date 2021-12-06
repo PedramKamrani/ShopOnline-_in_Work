@@ -15,9 +15,9 @@ namespace ShopManagment.Application
             _repository = repository;
             _fileUploader = fileUploader;
         }
-        public OpreationResult Create(CreateProductPicture command)
+        public OperationResult Create(CreateProductPicture command)
         {
-            OpreationResult opreationResult = new OpreationResult();
+            OperationResult opreationResult = new OperationResult();
             string path = "";
             var product = _repository.GetProductByCategory(command.ProductId);
             if (product == null)
@@ -30,9 +30,9 @@ namespace ShopManagment.Application
 
         }
 
-        public OpreationResult Edit(EditProductPicture command)
+        public OperationResult Edit(EditProductPicture command)
         {
-            OpreationResult opreationResult = new OpreationResult();
+            OperationResult opreationResult = new OperationResult();
             var produtpicture = _repository.GetProductByCategory(command.Id);
             if (produtpicture == null)
                 return opreationResult.Faild(ApplicationMessage.RecordNotFound);
@@ -48,9 +48,9 @@ namespace ShopManagment.Application
             return _repository.GetDetails(id);
         }
 
-        public OpreationResult Remove(long id)
+        public OperationResult Remove(long id)
         {
-            OpreationResult operationresult = new OpreationResult();
+            OperationResult operationresult = new OperationResult();
             ProductPicture item = _repository.Get(id);
             if (item != null)
                 item.Remove();
@@ -58,9 +58,9 @@ namespace ShopManagment.Application
             return operationresult.Success();
         }
 
-        public OpreationResult ReStore(long id)
+        public OperationResult ReStore(long id)
         {
-            OpreationResult opreationResult = new OpreationResult();
+            OperationResult opreationResult = new OperationResult();
             ProductPicture item=_repository.Get(id);
             if (item != null)
                 item.Restore();

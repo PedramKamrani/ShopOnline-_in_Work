@@ -5,8 +5,8 @@ namespace Discount.Managment.Application.Contract.Discount.Managment.DTO
 {
     public interface ICustomerDiscountApplication
     {
-        OpreationResult Create(CreateCustomerDiscountDTO command);
-        OpreationResult Edit(EditCustomerDisCountDTO command);
+        OperationResult Create(CreateCustomerDiscountDTO command);
+        OperationResult Edit(EditCustomerDisCountDTO command);
         EditCustomerDisCountDTO GetDetails(long Id);
         List<DiscountCustomerDTO> Search(CustomerDiscountSearchModel searchModel);
     }

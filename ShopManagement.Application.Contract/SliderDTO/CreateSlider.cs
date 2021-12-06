@@ -6,9 +6,9 @@ namespace ShopManagement.Application.Contract.SliderDTO
 {
     public class CreateSlider
     {
-        [Required(ErrorMessage = AttributetMessage.IsRequerd)]
+        [Required(ErrorMessage = AttributetMessage.IsRequired)]
         public IFormFile Picture { get; set; }
-        [Required(ErrorMessage = AttributetMessage.IsRequerd)]
+        [Required(ErrorMessage = AttributetMessage.IsRequired)]
         public string PictureAlt { get; set; }
         public string PictureTitle { get; set; }
         public string Heading { get; set; }

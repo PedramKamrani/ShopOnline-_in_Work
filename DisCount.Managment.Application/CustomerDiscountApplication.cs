@@ -13,10 +13,10 @@ namespace DisCount.Managment.Application
         {
             _repository = repository;
         }
-        public OpreationResult Create(CreateCustomerDiscountDTO command)
+        public OperationResult Create(CreateCustomerDiscountDTO command)
         {
 
-            OpreationResult opreation = new OpreationResult();
+            OperationResult opreation = new OperationResult();
             if (_repository.Exsists(x => x.DiscounRate == command.DiscounRate && x.ProductId != command.ProductId))
                 return opreation.Faild(ApplicationMessage.DuplicatedRecord);
             DateTime Startdate = command.StartDate.ToGeorgianDateTime();
@@ -27,9 +27,9 @@ namespace DisCount.Managment.Application
             return opreation.Success();
         }
 
-        public OpreationResult Edit(EditCustomerDisCountDTO command)
+        public OperationResult Edit(EditCustomerDisCountDTO command)
         {
-            OpreationResult opreation = new OpreationResult();
+            OperationResult opreation = new OperationResult();
             var entity = _repository.Get(command.Id);
             if (entity == null)
                 return opreation.Faild(ApplicationMessage.RecordNotFound);

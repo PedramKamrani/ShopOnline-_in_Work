@@ -9,11 +9,11 @@ namespace ShopManagement.Application.Contract.SliderDTO
 {
    public interface ISliderApplication
     {
-        OpreationResult Create(CreateSlider command);
-        OpreationResult Edit(EditSlider command);
+        OperationResult Create(CreateSlider command);
+        OperationResult Edit(EditSlider command);
         List<SliderDTO> GetListSlider();
         EditSlider GetDetails(long id);
-        OpreationResult Remove(long id);
-        OpreationResult Restore(long id);
+        OperationResult Remove(long id);
+        OperationResult Restore(long id);
     }
 }

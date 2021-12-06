@@ -13,9 +13,9 @@ namespace ShopManagment.Application
             _repository = repository;
         }
 
-        public OpreationResult Create(CreateDto dto)
+        public OperationResult Create(CreateDto dto)
         {
-            OpreationResult opreationResult = new OpreationResult();
+            OperationResult opreationResult = new OperationResult();
             if (_repository.Exsists(e => e.Name == dto.Name))
                 return opreationResult.Faild(ApplicationMessage.DuplicatedRecord); 
 
@@ -28,9 +28,9 @@ namespace ShopManagment.Application
 
         }
 
-        public OpreationResult Edit(EditDto dto)
+        public OperationResult Edit(EditDto dto)
         {
-            OpreationResult opreationResult = new OpreationResult();
+            OperationResult opreationResult = new OperationResult();
             ProductCategory entity = _repository.Get(dto.Id);
             if (entity == null)
                 return opreationResult.Faild(ApplicationMessage.RecordNotFound);

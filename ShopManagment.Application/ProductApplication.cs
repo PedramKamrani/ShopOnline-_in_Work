@@ -16,9 +16,9 @@ namespace ShopManagment.Application
         {
             _repository = repository;
         }
-        public OpreationResult Create(CreateProductDTO dto)
+        public OperationResult Create(CreateProductDTO dto)
         {
-            OpreationResult opreationResult = new OpreationResult();
+            OperationResult opreationResult = new OperationResult();
             if (_repository.Exsists(x => x.Name == dto.Name))
                 return opreationResult.Faild(ApplicationMessage.DuplicatedRecord);
             string Slug = dto.Slug.Slugify();
@@ -32,9 +32,9 @@ namespace ShopManagment.Application
 
         }
 
-        public OpreationResult Edit(EditProductDTO dto)
+        public OperationResult Edit(EditProductDTO dto)
         {
-            OpreationResult opreationResult = new OpreationResult();
+            OperationResult opreationResult = new OperationResult();
             var entity = _repository.Get(dto.Id);
             if (entity == null)
                 return opreationResult.Faild(ApplicationMessage.RecordNotFound);
