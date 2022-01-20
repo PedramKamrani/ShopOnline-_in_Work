@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\1_QueryLayer\1_QueryLayer.csproj" />
+    <ProjectReference Include="..\Account.Management.Infrastracure\Account.Management.Infrastracure.csproj" />
     <ProjectReference Include="..\ShopManagement.Infrastrucer\ShopManagement.Infrastrucer.csproj" />
     <ProjectReference Include="..\ShopManagment.Application\ShopManagment.Application.csproj" />
   </ItemGroup>
