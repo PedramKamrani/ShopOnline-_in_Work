@@ -13,7 +13,7 @@ namespace Account.Management.Application
         private readonly IAccountRepository _repository;
         private readonly IPasswordHasher _passwordHasher ;
         private readonly IFileUploader _uploader;
-        public AccountApplication(AccountRepository repository, IPasswordHasher passwordHasher, IFileUploader uploader)
+        public AccountApplication(IAccountRepository repository, IPasswordHasher passwordHasher, IFileUploader uploader)
         {
             _repository= repository;    
             _passwordHasher= passwordHasher;
