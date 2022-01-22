@@ -8,7 +8,7 @@ namespace Colleague.Managment.Infrastucre.EFCore
         {
 
         }
-        //public DbSet<> Colleagues { get; set; }
+        //public DbSet<C> Colleagues { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

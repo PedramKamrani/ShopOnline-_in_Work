@@ -1,4 +1,5 @@
-﻿using Account.Management.Infrastracure.Mapping;
+﻿using Account.Management.Domain;
+using Account.Management.Infrastracure.Mapping;
 using Microsoft.EntityFrameworkCore;
 
 namespace Account.Management.Infrastracure
@@ -10,13 +11,13 @@ namespace Account.Management.Infrastracure
 
         }
 
-        public DbSet<Account.Management.Domain.Users.Account> Accounts { get; set; }
+        public DbSet<Accounts> Accounts { get; set; }
+        public DbSet<Role> Roles { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            var assmberly = typeof(AccountMapping).Assembly;
-            modelBuilder.ApplyConfigurationsFromAssembly(assmberly);
-            base.OnModelCreating(modelBuilder);
+            var Assmbely = typeof(AccountMapping).Assembly;
+            modelBuilder.ApplyConfigurationsFromAssembly(Assmbely);
         }
     }
 }

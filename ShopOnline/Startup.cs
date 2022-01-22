@@ -1,4 +1,6 @@
+using _0_FrameWork.Application;
 using _0_FramWork.Application;
+using Account.Management.Configure;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -23,9 +25,11 @@ namespace ShopOnline
         {
             #region IOC
             services.AddScoped<IFileUploader,FileUploader>();
+            services.AddScoped<IPasswordHasher,PasswordHasher>();
             #endregion
             string connectionstring = Configuration.GetConnectionString("ShopOnlin");
             ShopManagementBootstraper.Configure(services, connectionstring);
+            BootstraperMappingAccountConfigure.Configure(services, connectionstring);
             services.AddRazorPages();
         }
 

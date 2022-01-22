@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _0_FramWork.Application
 {
-   public class ApplicationMessage
+   public static class ApplicationMessage
     {
         public const string DuplicatedRecord = "امکان ثبت رکورد تکراری وجود ندارد. لطفا مجدد تلاش بفرمایید.";
         public const string RecordNotFound = "رکورد با اطلاعات درخواست شده یافت نشد. لطفا مجدد تلاش بفرمایید.";

@@ -61,13 +61,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Account", "Account", "{AD1B
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Account.Management.Domain", "Account.Management.Domain\Account.Management.Domain.csproj", "{122B661F-6C60-4AFC-8891-3E0B4862B066}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AccountManagement.Application.Contract", "AccountManagement.Application.Contract\AccountManagement.Application.Contract.csproj", "{CDB1D3E4-CBB6-418B-B0DB-3AC1C28C3E73}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Account.Management.Application.Contract", "AccountManagement.Application.Contract\Account.Management.Application.Contract.csproj", "{CDB1D3E4-CBB6-418B-B0DB-3AC1C28C3E73}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Account.Management.Application", "Account.Management.Application\Account.Management.Application.csproj", "{B260FF5A-FA7F-4A53-BAC3-6C0AFDD7CE00}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Account.Management.Application", "Account.Management.Application\Account.Management.Application.csproj", "{B260FF5A-FA7F-4A53-BAC3-6C0AFDD7CE00}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Account.Management.Infrastracure", "Account.Management.Infrastracure\Account.Management.Infrastracure.csproj", "{E41BB399-50FD-4C39-A1DF-74E7F4B98CBB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Account.Management.Infrastracure", "Account.Management.Infrastracure\Account.Management.Infrastracure.csproj", "{E41BB399-50FD-4C39-A1DF-74E7F4B98CBB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Account.Management.Configure", "Account.Management.Configure\Account.Management.Configure.csproj", "{E5A1E88D-CE13-40A0-A0CF-CCE28DD5AB53}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Account.Management.Configure", "Account.Management.Configure\Account.Management.Configure.csproj", "{E5A1E88D-CE13-40A0-A0CF-CCE28DD5AB53}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

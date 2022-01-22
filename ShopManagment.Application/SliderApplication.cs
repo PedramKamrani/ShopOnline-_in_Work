@@ -1,7 +1,7 @@
-﻿using _0_FramWork.Application;
+﻿using _0_FrameWork.Application;
+using _0_FramWork.Application;
 using ShopManagement.Application.Contract.SliderDTO;
 using ShopManagement.Domain.SliderAgg;
-using ShopManagement.Infrastrucer.Repository;
 using System.Collections.Generic;
 
 namespace ShopManagment.Application
@@ -19,7 +19,7 @@ namespace ShopManagment.Application
         {
             OperationResult opreationResult = new OperationResult();
             string path = $"slider";
-           var picproduct= _uploader.Upload(command.Picture, path);
+            var picproduct = _uploader.Upload(command.Picture, path);
             var entity = new Slider(picproduct, command.PictureAlt, command.PictureTitle, command.Heading, command.Title, command.Text, command.BtnText, command.Link);
             _repository.Create(entity);
             _repository.SaveChanges();

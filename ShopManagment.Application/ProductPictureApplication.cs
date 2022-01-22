@@ -1,4 +1,5 @@
-﻿using _0_FramWork.Application;
+﻿using _0_FrameWork.Application;
+using _0_FramWork.Application;
 using ShopManagement.Application.Contract.ProductPictureDTO;
 using ShopManagement.Domain.ProductPictureAgg;
 using System.Collections.Generic;
@@ -61,7 +62,7 @@ namespace ShopManagment.Application
         public OperationResult ReStore(long id)
         {
             OperationResult opreationResult = new OperationResult();
-            ProductPicture item=_repository.Get(id);
+            ProductPicture item = _repository.Get(id);
             if (item != null)
                 item.Restore();
             _repository.SaveChanges();

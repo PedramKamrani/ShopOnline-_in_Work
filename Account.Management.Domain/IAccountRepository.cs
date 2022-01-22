@@ -2,9 +2,9 @@
 using AccountManagement.Application.Contract.ViewModels;
 using System.Collections.Generic;
 
-namespace Account.Management.Domain.Users
+namespace Account.Management.Domain
 {
-    public interface IAccountRepository : IBaseRepository<long, Account>
+    public interface IAccountRepository : IBaseRepository<long, Accounts>
     {
         EditAccount GetDetail(long id);
         List<AccountViewModel> serach(SearchAccount search);

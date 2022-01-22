@@ -1,4 +1,6 @@
-﻿namespace AccountManagement.Application.Contract.ViewModels
+﻿using Microsoft.AspNetCore.Http;
+
+namespace AccountManagement.Application.Contract.ViewModels
 {
     public class CreateAccount
     {
@@ -7,7 +9,7 @@
         public string Password { get;  set; }
         public string Mobile { get;  set; }
         public long RoleId { get;  set; }
-        public string ProfilePhoto { get;  set; }
+        public IFormFile ProfilePhoto { get;  set; }
 
     }
 }
