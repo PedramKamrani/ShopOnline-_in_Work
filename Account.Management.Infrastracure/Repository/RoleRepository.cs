@@ -11,7 +11,7 @@ namespace Account.Management.Infrastracure.Repository
         private readonly AccountContext _context;
         public RoleRepository(AccountContext context) : base(context)
         {
-
+            _context = context;
         }
 
         public EditRole GetDetail(long id)
@@ -27,7 +27,6 @@ namespace Account.Management.Infrastracure.Repository
         }
 
         public List<RoleViewModel> GetAllRole()
-        
         {
            var roles= _context.Roles.Select(x => new RoleViewModel
             {

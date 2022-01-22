@@ -3,6 +3,7 @@ using AccountManagement.Application.Contract.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using System.Collections.Generic;
 
 namespace ServiceHost.Pages
 {
@@ -10,7 +11,8 @@ namespace ServiceHost.Pages
     {
         private readonly IAccountApplication _account;
         private readonly IRoleApplication _role;
-        public SelectList Rolelist { get; set; } 
+        public List<RoleViewModel> Rolelist { get; set; } 
+        
         public CreateAccount Create { get; set; }
         public AccountModel(IAccountApplication account, IRoleApplication role)
         {
@@ -19,7 +21,8 @@ namespace ServiceHost.Pages
         }
         public void OnGet()
         {
-            Rolelist = new SelectList(_role.GetRoles(), "Id", "Name");
+            Rolelist = _role.GetRoles();
+            
         }
         public IActionResult OnPost(CreateAccount command)
         {
