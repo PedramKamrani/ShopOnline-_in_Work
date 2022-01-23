@@ -1,13 +1,16 @@
 using _0_FrameWork.Application;
 using _0_FramWork.Application;
 using Account.Management.Configure;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using ServiceHost;
 using ShopManagement.Configure;
+using System;
 
 namespace ShopOnline
 {
@@ -26,10 +29,23 @@ namespace ShopOnline
             #region IOC
             services.AddScoped<IFileUploader,FileUploader>();
             services.AddScoped<IPasswordHasher,PasswordHasher>();
+            services.AddScoped<IAuthHelper, AuthHelper>();
+            services.AddHttpContextAccessor();
             #endregion
             string connectionstring = Configuration.GetConnectionString("ShopOnlin");
             ShopManagementBootstraper.Configure(services, connectionstring);
             BootstraperMappingAccountConfigure.Configure(services, connectionstring);
+
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+            .AddCookie(CookieAuthenticationDefaults.AuthenticationScheme, o =>
+            {
+                o.LoginPath = new PathString("/Account");
+                o.LogoutPath = new PathString("/Account");
+                o.AccessDeniedPath = new PathString("/AccessDenied");
+                o.ExpireTimeSpan = TimeSpan.FromDays(2);
+                o.Cookie.HttpOnly = true;
+                
+            });
             services.AddRazorPages();
         }
 
@@ -46,10 +62,10 @@ namespace ShopOnline
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
-
+            app.UseAuthentication();
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-
+            app.UseCookiePolicy();  
             app.UseRouting();
 
             app.UseAuthorization();

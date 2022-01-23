@@ -1,4 +1,5 @@
-﻿using _0_FramWork.Application;
+﻿using _0_FrameWork.Application;
+using _0_FramWork.Application;
 using System.Collections.Generic;
 
 namespace AccountManagement.Application.Contract.ViewModels
@@ -9,5 +10,7 @@ namespace AccountManagement.Application.Contract.ViewModels
         OperationResult Edit(EditAccount command);
         EditAccount GetDetaile(long id);
         List<AccountViewModel> search(SearchAccount search);
+        OperationResult Login(LoginViewModels models);
+        void LogOut();
     }
 }

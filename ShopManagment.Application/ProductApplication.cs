@@ -20,7 +20,7 @@ namespace ShopManagment.Application
         {
             OperationResult opreationResult = new OperationResult();
             if (_repository.Exsists(x => x.Name == dto.Name))
-                return opreationResult.Faild(ApplicationMessage.DuplicatedRecord);
+                return opreationResult.Failed(ApplicationMessage.DuplicatedRecord);
             string Slug = dto.Slug.Slugify();
             var entity = new Product(dto.Name, dto.Code, dto.ShortDescription, dto.Description
                 , dto.Picture, dto.PictureAlt, dto.PictureTitle
@@ -37,9 +37,9 @@ namespace ShopManagment.Application
             OperationResult opreationResult = new OperationResult();
             var entity = _repository.Get(dto.Id);
             if (entity == null)
-                return opreationResult.Faild(ApplicationMessage.RecordNotFound);
+                return opreationResult.Failed(ApplicationMessage.RecordNotFound);
             if (_repository.Exsists(x => x.Name == dto.Name && x.Id != dto.Id))
-                return opreationResult.Faild(ApplicationMessage.DuplicatedRecord);
+                return opreationResult.Failed(ApplicationMessage.DuplicatedRecord);
             string Slug = dto.Slug.Slugify();
             entity.Edit(dto.Name,dto.Code,dto.ShortDescription,dto.Description,
                 dto.Picture,dto.PictureAlt,dto.PictureTitle,dto.CategoryId,Slug,dto.Keywords,dto.MetaDescription);

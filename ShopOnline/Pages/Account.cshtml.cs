@@ -11,9 +11,9 @@ namespace ServiceHost.Pages
     {
         private readonly IAccountApplication _account;
         private readonly IRoleApplication _role;
-        public List<RoleViewModel> Rolelist { get; set; } 
-        
-        public CreateAccount Create { get; set; }
+        public List<RoleViewModel> Rolelist { get; set; }
+
+        public CreateAccount Create;
         public AccountModel(IAccountApplication account, IRoleApplication role)
         {
             _account = account;
@@ -27,6 +27,7 @@ namespace ServiceHost.Pages
         public IActionResult OnPost(CreateAccount command)
         {
             _account.Create(command);
+            Rolelist = _role.GetRoles();
             return Page();
         }
     }

@@ -31,7 +31,7 @@ namespace ShopManagment.Application
             OperationResult opreationResult = new OperationResult();
             var entity = _repository.Get(command.Id);
             if (entity == null)
-                return opreationResult.Faild(ApplicationMessage.RecordNotFound);
+                return opreationResult.Failed(ApplicationMessage.RecordNotFound);
             string path = $"slider";
             var picproduct = _uploader.Upload(command.Picture, path);
             entity.Edit(picproduct, command.PictureAlt, command.PictureTitle, command.Heading, command.Title, command.Text, command.BtnText, command.Link);

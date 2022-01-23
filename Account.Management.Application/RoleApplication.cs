@@ -17,7 +17,7 @@ namespace Account.Management.Application
         {
             OperationResult operation = new OperationResult();
             if (_repository.Exsists(x => x.Name == command.Name))
-                return operation.Faild(ApplicationMessage.DuplicatedRecord);
+                return operation.Failed(ApplicationMessage.DuplicatedRecord);
             var model=new Role(command.Name);
             _repository.Create(model);
             _repository.SaveChanges();
@@ -29,7 +29,7 @@ namespace Account.Management.Application
             OperationResult operation=new OperationResult();
             var role=_repository.Get(command.Id);
             if (_repository.Exsists(x => x.Name == command.Name && x.Id != command.Id))
-                return operation.Faild(ApplicationMessage.DuplicatedRecord);
+                return operation.Failed(ApplicationMessage.DuplicatedRecord);
             role.Edit(command.Name);
             _repository.SaveChanges();
             return operation.Success();

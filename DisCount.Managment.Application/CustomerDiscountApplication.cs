@@ -18,7 +18,7 @@ namespace DisCount.Managment.Application
 
             OperationResult opreation = new OperationResult();
             if (_repository.Exsists(x => x.DiscounRate == command.DiscounRate && x.ProductId != command.ProductId))
-                return opreation.Faild(ApplicationMessage.DuplicatedRecord);
+                return opreation.Failed(ApplicationMessage.DuplicatedRecord);
             DateTime Startdate = command.StartDate.ToGeorgianDateTime();
             DateTime Enddate = command.EndDate.ToGeorgianDateTime();
             var entity = new CustomerDiscount(command.ProductId, command.DiscounRate, Startdate, Enddate, command.Reason);
@@ -32,9 +32,9 @@ namespace DisCount.Managment.Application
             OperationResult opreation = new OperationResult();
             var entity = _repository.Get(command.Id);
             if (entity == null)
-                return opreation.Faild(ApplicationMessage.RecordNotFound);
+                return opreation.Failed(ApplicationMessage.RecordNotFound);
             if (_repository.Exsists(x => x.DiscounRate == command.DiscounRate && x.ProductId == command.ProductId && x.Id != command.Id))
-                return opreation.Faild(ApplicationMessage.DuplicatedRecord);
+                return opreation.Failed(ApplicationMessage.DuplicatedRecord);
             DateTime Startdate = command.StartDate.ToGeorgianDateTime();
             DateTime Enddate = command.EndDate.ToGeorgianDateTime();
             entity.Edit(command.ProductId, command.DiscounRate, Startdate, Enddate, command.Reason);

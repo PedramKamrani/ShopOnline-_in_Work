@@ -5,29 +5,29 @@
 <form  method="post">
     <div class="mb-3">
       <label  class="form-label">Full Name</label>
-      <input type="text" id="disabledTextInput" asp-for="@Model.Create.Fullname" class="form-control" placeholder="Disabled input">
+      <input type="text" id="disabledTextInput" name="Fullname" asp-for="Create.Fullname" class="form-control" placeholder="fullname">
     </div>
    <div class="mb-3">
       <label  class="form-label">User name</label>
-      <input type="text"  asp-for="@Model.Create.UserName" class="form-control" placeholder="Disabled input">
+      <input type="text"  name="UserName" class="form-control" placeholder="username">
     </div>
     <div class="mb-3">
       <label  class="form-label">Mobile</label>
-      <input type="text" id="disabledTextInput" asp-for="@Model.Create.Mobile" class="form-control" placeholder="Disabled input">
+      <input type="text" id="disabledTextInput" name="Mobile" class="form-control" placeholder="mobile">
     </div>
     <div class="mb-3">
       <label  class="form-label">Password</label>
-      <input type="text" id="disabledTextInput" asp-for="@Model.Create.Password" class="form-control" placeholder="Disabled input">
+      <input type="text" id="disabledTextInput" name="Password" class="form-control" placeholder="password">
     </div>
     <div class="mb-3">
       <label  class="form-label">Profile</label>
-      <input type="file" id="disabledTextInput" asp-for="@Model.Create.ProfilePhoto" class="form-control" placeholder="Disabled input">
+      <input type="file" id="disabledTextInput" name="ProfilePhoto" class="form-control" placeholder="Profile">
     </div>
     <div class="row">
             <div class="col-md-12">
                 <div class="form-group">
                     <label asp-for="@Model.Create.RoleId" class="control-label">نقش</label>
-                    <select class="form-control" asp-for="@Model.Create.RoleId"
+                    <select class="form-control"name="RoleId"
                             asp-items='new SelectList(@Model.Rolelist, "Id", "Name")'>
                         <option value="0">نقش را انتخاب کن</option>
                     </select>

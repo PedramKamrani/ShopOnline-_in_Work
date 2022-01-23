@@ -15,7 +15,7 @@
             Message = message;
             return this;
         }
-        public OperationResult Faild(string message)
+        public OperationResult Failed(string message)
         {
             IsSeccuseed = false;
             Message = message;

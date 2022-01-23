@@ -1,0 +1,23 @@
+﻿@page
+@model ServiceHost.Pages.LoginModel
+@{
+}
+<form asp-page="/Login"   method="post">
+   
+   
+    <div class="mb-3">
+      <label  class="form-label">Username</label>
+      <input type="text" id="disabledTextInput" name="Username" class="form-control" placeholder="password">
+    </div>
+    <div class="mb-3">
+      <label  class="form-label">Password</label>
+      <input type="password" id="disabledTextInput" name="Password" class="form-control" placeholder="Profile">
+    </div>
+    
+    
+    <button type="submit" class="btn btn-primary">ورود</button>
+    <a asp-page="Login" asp-page-handler="Logout" class="btn btn-primary">خروج</a>
+ 
+</form>
+
+

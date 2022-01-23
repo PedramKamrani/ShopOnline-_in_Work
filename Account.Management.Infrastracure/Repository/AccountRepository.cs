@@ -15,6 +15,22 @@ namespace Account.Management.Infrastracure.Repository
             _context = context;
         }
 
+        public AccountViewModel GetBy(string username)
+        {
+            return _context.Accounts.Where(x=>x.UserName == username)
+                .Select(x=>new AccountViewModel
+                {
+                    UserName = x.UserName,
+                    Fullname = x.Fullname,
+                    id = x.Id,
+                    Mobile=x.Mobile,
+                    ProfilePhoto=x.ProfilePhoto,
+                    Password=x.Password,
+                    RoleId=x.RoleId
+                    
+                }).FirstOrDefault();
+        }
+
         public EditAccount GetDetail(long id)
         {
             var account = _context.Accounts.Select(x => new EditAccount
